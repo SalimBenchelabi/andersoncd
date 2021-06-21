@@ -10,10 +10,10 @@ X, y, _ = make_correlated_data(
 
 
 t_start = time.time()
-weights = np.random.rand(X.shape[1])a
+weights = np.random.rand(X.shape[1])
 weights[:50] = 0
 alpha_max = np.max(np.abs(X[:, 50:].T @ y)) / len(y)
 clf = WeightedLasso(weights=weights, alpha=alpha_max/50, verbose=2)
 clf.fit(X, y)
 t_elapsed = time.time() - t_start
-print(f'Time taken: {t_elapsed:.3s}')
+print(f'Time taken: {t_elapsed:.3f} s')
