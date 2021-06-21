@@ -22,7 +22,7 @@ def bench_solver():
     t_start = time.time()
     celer_primal(
         X, y, alpha, w, R, norms_X_col, weights, max_iter=10,
-        max_epochs=1_000, p0=10, use_acc=True, K=5, verbose=True,
+        max_epochs=1_000, p0=10, use_acc=True, K=5, verbose=2,
         tol=1e-10)
     t_ellapsed = time.time() - t_start
     print(t_ellapsed)
